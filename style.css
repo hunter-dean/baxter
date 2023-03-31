@@ -8,7 +8,7 @@ header {
   background-color: #336699;
   color: white;
   padding: 20px;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 nav ul {
@@ -52,4 +52,5 @@ footer {
   color: white;
   padding: 10px;
   text-align: center;
+  border-radius: 20px;
 }
