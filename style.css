@@ -1,7 +1,10 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #c7d9ff;
-  color: #333;
+font-family: Arial, sans-serif;
+background-color: #c7d9ff;
+color: #333;
+background-image: url('https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg');
+background-repeat: no-repeat;
+color: #FFFFFF;
 }
 
 header {
