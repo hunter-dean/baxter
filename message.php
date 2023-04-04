@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = trim($_POST["name"]);
   $message = trim($_POST["message"]);
-  $to = "front.office@baxter-academy.net"; // replace with your email address
+  $to = "front.office@baxter-academy.net";
 
   if (!empty($name) && !empty($message)) {
     $subject = "New message from $name";
