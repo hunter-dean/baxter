@@ -1,8 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <title>Welcome to Baxter Academy</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #ff00ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            font-size: 36px;
+            margin: 50px;
+        }
+
+        .content {
+            margin: 50px;
+        }
+
+        .image-placeholder {
+            width: 300px;
+            height: 200px;
+            background-color: #ff00ff;
+            margin: 20px;
+        }
+    </style>
+</head>
 <body>
-  <h1>this is a school for EPIC GAMERS ONLY</h1>
-<h2>if you are not an epic gamer, please leave this site now.</h2>
+    <div class="header">
+        <h1>Welcome to Baxter Academy</h1>
+        <marquee behavior="scroll" direction="left"><img src="marquee.gif" alt="marquee"></marquee>
+    </div>
+
+    <div class="content">
+        <h2>About Us</h2>
+        <p>We are Baxter Academy. That's all you need to know.</p>
+
+        <h2>Our Mission</h2>
+        <p>We have no mission. We exist for the sake of existing.</p>
+
+        <h2>Meet Our Team</h2>
+
+        <div class="BAN.png"></div>
+        <div class="BAN.png"></div>
+        <div class="BAN.png"></div>
+    </div>
+
+    <audio autoplay loop>
+        <source src="background_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const imagePlaceholders = document.querySelectorAll('.image-placeholder');
+
+        // Generate random background colors for image placeholders
+        imagePlaceholders.forEach((placeholder) => {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            placeholder.style.backgroundColor = '#' + randomColor;
+        });
+    </script>
 </body>
 </html>
