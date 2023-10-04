@@ -1,3 +1,1 @@
-Here's a text file for reading about this github page.
-
-put stuff here!
+Welcome to the Baxter academy .Net website! Feel free to code funny things if you want to!
