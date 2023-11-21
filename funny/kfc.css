@@ -1,1 +1,67 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #d50000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #45a049;
+}
+
+/* KFC interior styling */
+#kfc-interior {
+    padding: 20px;
+}
+
+#counter {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#cashier {
+    text-align: center;
+}
+
+#cashier img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
