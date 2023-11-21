@@ -16,7 +16,6 @@
         }
 
         header {
-            background-color: #3498db;
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 20px;
@@ -24,6 +23,29 @@
 
         h1 {
             color: #ffffff;
+            animation: colorChange 5s infinite; /* Add animation property */
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #ff0000; /* Red */
+            }
+
+            25% {
+                color: #00ff00; /* Green */
+            }
+
+            50% {
+                color: #0000ff; /* Blue */
+            }
+
+            75% {
+                color: #ff00ff; /* Magenta */
+            }
+
+            100% {
+                color: #ffff00; /* Yellow */
+            }
         }
 
         p {
@@ -50,6 +72,7 @@
     <iframe src="https://www.tokyvideo.com/es/embed/206125" frameborder="0" width="640" height="360" scrolling="no"
         allowfullscreen webkitallowfullscreen mozallowfullscreen allowtransparency style="display:block;max-width:100%;margin:0 auto 10px"></iframe>
     <p>Thanks for visiting!</p>
+    <script src="script.js"></script> <!-- Add the script file -->
 </body>
 
 </html>
