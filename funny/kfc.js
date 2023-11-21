@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (banConfirmation) {
             alert("You have been banned from KFC!");
         } else {
-            alert("Feel free to explore the menu and place an order when you're ready.");
+            alert("How DARE you press order button if you are not ready. Bitch.");
         }
     }
 
