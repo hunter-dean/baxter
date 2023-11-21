@@ -1,0 +1,51 @@
+/* Add your styling for the Chicken Sandwich Fanpage here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffefd5;
+}
+
+header {
+    background-color: #ff6347;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#content {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+#related-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#related-links h2 {
+    color: #ff6347;
+}
+
+#related-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#related-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#related-links a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#related-links a:hover {
+    text-decoration: underline;
+}
