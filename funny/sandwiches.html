@@ -25,6 +25,10 @@
             document.body.appendChild(gif);
 
             const speed = Math.random() * 2 + 1; // Random speed between 1 and 3
+            const size = Math.random() * 0.5 + 0.5; // Random size between 0.5 and 1
+
+            gif.style.width = `${size * 100}px`;
+            gif.style.height = `${size * 100}px`;
 
             const angle = Math.random() * Math.PI * 2; // Random angle in radians
             const startX = window.innerWidth * Math.random();
@@ -37,10 +41,13 @@
                 x += Math.cos(angle) * speed;
                 y += Math.sin(angle) * speed;
 
-                if (x > window.innerWidth || x < 0 || y > window.innerHeight || y < 0) {
-                    // Reset position if gif goes out of the screen
-                    x = startX;
-                    y = startY;
+                // Bounce off the edges
+                if (x > window.innerWidth - gif.width || x < 0) {
+                    angle = Math.PI - angle; // Reverse the angle on the x-axis
+                }
+
+                if (y > window.innerHeight - gif.height || y < 0) {
+                    angle = -angle; // Reverse the angle on the y-axis
                 }
 
                 gif.style.transform = `translate(${x}px, ${y}px)`;
@@ -58,8 +65,10 @@
         ];
 
         // Create flying gifs
-        gifUrls.forEach(createFlyingGif);
+        for (let i = 0; i < 200; i++) {
+            const randomGifUrl = gifUrls[Math.floor(Math.random() * gifUrls.length)];
+            createFlyingGif(randomGifUrl);
+        }
     </script>
 </body>
 </html>
-
