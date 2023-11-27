@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying GIFs</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .gif {
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createFlyingGif(src) {
+            const gif = document.createElement('img');
+            gif.src = src;
+            gif.classList.add('gif');
+            document.body.appendChild(gif);
+
+            const speed = Math.random() * 2 + 1; // Random speed between 1 and 3
+
+            const angle = Math.random() * Math.PI * 2; // Random angle in radians
+            const startX = window.innerWidth * Math.random();
+            const startY = window.innerHeight * Math.random();
+
+            let x = startX;
+            let y = startY;
+
+            function updatePosition() {
+                x += Math.cos(angle) * speed;
+                y += Math.sin(angle) * speed;
+
+                if (x > window.innerWidth || x < 0 || y > window.innerHeight || y < 0) {
+                    // Reset position if gif goes out of the screen
+                    x = startX;
+                    y = startY;
+                }
+
+                gif.style.transform = `translate(${x}px, ${y}px)`;
+                requestAnimationFrame(updatePosition);
+            }
+
+            updatePosition();
+        }
+
+        // Add your gif URLs here
+        const gifUrls = [
+            'url_to_your_gif1.gif',
+            'url_to_your_gif2.gif',
+            'url_to_your_gif3.gif'
+            // Add more gif URLs as needed
+        ];
+
+        // Create flying gifs
+        gifUrls.forEach(createFlyingGif);
+    </script>
+</body>
+</html>
 
