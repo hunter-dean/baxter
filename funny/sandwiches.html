@@ -31,11 +31,8 @@
             gif.style.height = `${size * 100}px`;
 
             const angle = Math.random() * Math.PI * 2; // Random angle in radians
-            const startX = window.innerWidth * Math.random();
-            const startY = window.innerHeight * Math.random();
-
-            let x = startX;
-            let y = startY;
+            let x = window.innerWidth * Math.random();
+            let y = window.innerHeight * Math.random();
 
             function updatePosition() {
                 x += Math.cos(angle) * speed;
@@ -64,10 +61,9 @@
             // Add more gif URLs as needed
         ];
 
-        // Create flying gifs
-        for (let i = 0; i < 200; i++) {
-            const randomGifUrl = gifUrls[Math.floor(Math.random() * gifUrls.length)];
-            createFlyingGif(randomGifUrl);
+        // Create 50 instances of each gif
+        for (let i = 0; i < 50; i++) {
+            gifUrls.forEach(createFlyingGif);
         }
     </script>
 </body>
