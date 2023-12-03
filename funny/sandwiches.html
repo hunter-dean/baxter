@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying GIFs</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .gif {
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createFlyingGif(src) {
+            const gif = document.createElement('img');
+            gif.src = src;
+            gif.classList.add('gif');
+            document.body.appendChild(gif);
+
+            const speed = Math.random() * 2 + 1; // Random speed between 1 and 3
+            const size = Math.random() * 0.5 + 0.5; // Random size between 0.5 and 1
+
+            gif.style.width = `${size * 100}px`;
+            gif.style.height = `${size * 100}px`;
+
+            const angle = Math.random() * Math.PI * 2; // Random angle in radians
+            let x = window.innerWidth * Math.random();
+            let y = window.innerHeight * Math.random();
+
+            function updatePosition() {
+                x += Math.cos(angle) * speed;
+                y += Math.sin(angle) * speed;
+
+                // Bounce off the edges
+                if (x > window.innerWidth - gif.width || x < 0) {
+                    angle = Math.PI - angle; // Reverse the angle on the x-axis
+                }
+
+                if (y > window.innerHeight - gif.height || y < 0) {
+                    angle = -angle; // Reverse the angle on the y-axis
+                }
+
+                gif.style.transform = `translate(${x}px, ${y}px)`;
+                requestAnimationFrame(updatePosition);
+            }
+
+            updatePosition();
+        }
+
+        // Add your gif URLs here
+        const gifUrls = [
+            '/images/chickensandwich1.gif',
+            '/images/chickensandwich2.gif',
+            // Add more gif URLs as needed
+        ];
+
+        // Create 50 instances of each gif
+        for (let i = 0; i < 50; i++) {
+            gifUrls.forEach(createFlyingGif);
+        }
+    </script>
+</body>
+</html>
