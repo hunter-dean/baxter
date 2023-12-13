@@ -1,6 +1,5 @@
 <?php
-function getRandomFunnyEffect()
-{
+function getRandomFunnyEffect() {
     $funnyEffects = [
         "rotate",
         "flip",
