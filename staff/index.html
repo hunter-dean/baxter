@@ -1,1 +1,74 @@
-fumarola
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Staff Members</title>
+	<style>
+		/* Style for the photo gallery */
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 20px;
+		}
+
+		/* Style for the images */
+		.gallery img {
+			width: 200px;
+			height: 200px;
+			margin: 10px;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: transform 0.2s ease-in-out;
+		}
+
+		/* Style for the staff member's name */
+		.gallery p {
+			text-align: center;
+			font-size: 20px;
+			margin: 10px;
+		}
+
+		/* Hover effect for the images */
+		.gallery img:hover {
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<!-- Photo gallery -->
+	<div class="gallery">
+		<!-- Staff member 1 -->
+		<div>
+			<a href="staff_member_1.html">
+				<img src="staff_member_1.jpg" alt="Staff Member 1">
+				<p>Staff Member 1</p>
+			</a>
+		</div>
+
+		<!-- Staff member 2 -->
+		<div>
+			<a href="staff_member_2.html">
+				<img src="staff_member_2.jpg" alt="Staff Member 2">
+				<p>Staff Member 2</p>
+			</a>
+		</div>
+
+		<!-- Staff member 3 -->
+		<div>
+			<a href="staff_member_3.html">
+				<img src="staff_member_3.jpg" alt="Staff Member 3">
+				<p>Staff Member 3</p>
+			</a>
+		</div>
+
+		<!-- Staff member 4 -->
+		<div>
+			<a href="staff_member_4.html">
+				<img src="staff_member_4.jpg" alt="Staff Member 4">
+				<p>Staff Member 4</p>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
