@@ -2,20 +2,18 @@
 $(document).ready(function () {
     // Get the header element
     const header = $('header h1');
-
+    const startcolor = 0;
     // Function to generate a random color
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
+    function getColor() {
+        for (let i = 0; i < 360; i++) {
+            color = startcolor + i;
         }
         return color;
     }
 
     // Function to change the header text color
     function changeHeaderColor() {
-        header.css('color', getRandomColor());
+        header.css('color', hsl(getColor(), 100%, 100%));
     }
 
     // Change the header text color every 2 seconds
