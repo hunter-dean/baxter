@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About China</title>
+  <style>
+    body {
+      background-color: #FFFF99;
+      font-family: Comic Sans MS, cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      text-align: justify;
+      padding-top: 50px;
+    }
+    .title {
+      font-size: 36px;
+      color: #FF4500;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .content {
+      font-size: 24px;
+      color: #000;
+      margin-bottom: 30px;
+    }
+    .interactive-section {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 50px;
+    }
+    .interactive-item {
+      text-align: center;
+    }
+    .button {
+      background-color: #FF4500;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .button:hover {
+      background-color: #FF6347;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">About China</h1>
+    <div class="content">
+      <p>China, officially known as the People's Republic of China, is a country in East Asia. It is the world's most populous country, with a population of over 1.4 billion. China has a rich history spanning thousands of years and is known for its cultural heritage, technological advancements, and economic growth.</p>
+      <p>Explore more about China through the interactive features below:</p>
+    </div>
+
+    <div class="interactive-section">
+      <div class="interactive-item">
+        <button class="button" onclick="showVirtualTour()">Take a Virtual Tour</button>
+      </div>
+      <div class="interactive-item">
+        <button class="button" onclick="exploreTimeline()">Explore Timeline</button>
+      </div>
+      <div class="interactive-item">
+        <button class="button" onclick="startLanguageLesson()">Start Language Lesson</button>
+      </div>
+    </div>
+
+    <div id="virtualTour" style="display: none;">
+      <h2>Virtual Tour</h2>
+      <p>Take a virtual tour of China and explore its famous landmarks and cultural sites!</p>
+      <!-- Add virtual tour content here -->
+    </div>
+
+    <div id="timeline" style="display: none;">
+      <h2>Timeline</h2>
+      <p>Explore a timeline of China's history, from ancient times to the present day!</p>
+      <!-- Add timeline content here -->
+    </div>
+
+    <div id="languageLesson" style="display: none;">
+      <h2>Language Lesson</h2>
+      <p>Start a language lesson and learn some basic Chinese phrases!</p>
+      <!-- Add language lesson content here -->
+    </div>
+  </div>
+
+  <script>
+    function showVirtualTour() {
+      document.getElementById('virtualTour').style.display = 'block';
+      document.getElementById('timeline').style.display = 'none';
+      document.getElementById('languageLesson').style.display = 'none';
+    }
+
+    function exploreTimeline() {
+      document.getElementById('virtualTour').style.display = 'none';
+      document.getElementById('timeline').style.display = 'block';
+      document.getElementById('languageLesson').style.display = 'none';
+    }
+
+    function startLanguageLesson() {
+      document.getElementById('virtualTour').style.display = 'none';
+      document.getElementById('timeline').style.display = 'none';
+      document.getElementById('languageLesson').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
